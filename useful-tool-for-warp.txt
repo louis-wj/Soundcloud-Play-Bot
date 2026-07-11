@@ -1,0 +1,360 @@
+for selenium signup, Go to this page:
+https://soundcloud.com/signin/forgot
+
+Email field XPATH: //*[@id="sign_in_up_email"]
+
+Continue button XPATH: //*[@id="sign_in_up_submit"]
+
+Password XPATH: //*[@id="enter_password_field"]
+
+Continue XPATH: //*[@id="enter_password_submit"]
+
+Month XPATH: //*[@id="birthDate_month"]
+
+Day XPATH: //*[@id="birthDate_day"]
+
+Year XPATH: //*[@id="birthDate_year"]
+
+gender XPATH: //*[@id="gender"]
+
+Continue Button XPATH: //*[@id="submit_signup"]
+
+Once that's done, it will then send an email.
+
+
+OR. Much faster and easier route is this:
+Using a FULLY UNDETECTED requests post (or another python library like requests),
+You can use this to fill out post request:
+Request URL
+https://api-auth.soundcloud.com/sign-up?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+Request Method
+POST
+Status Code
+202 Accepted
+Remote Address
+108.138.233.91:443
+Referrer Policy
+strict-origin
+accept-ch
+Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory
+access-control-allow-credentials
+true
+access-control-allow-headers
+Authorization, Content-Type, Device-Locale, Device-Session-Token, X-Anonymous-Id, X-CSRF-Token, X-Datadome-ClientId, X-Tracking-Anonymous-Id
+access-control-allow-methods
+DELETE, GET, PATCH, POST, PUT
+access-control-allow-origin
+https://secure.soundcloud.com
+access-control-expose-headers
+Date, X-DD-B, X-Set-Cookie
+access-control-max-age
+1728000
+connection
+keep-alive
+content-encoding
+gzip
+content-length
+347
+content-type
+application/json; charset=utf-8
+date
+Thu, 02 Apr 2026 11:36:37 GMT
+referrer-policy
+no-referrer
+server
+am/2
+set-cookie
+datadome=UmBdjxNbcXzjryQ12x_qUe9Q0L0vWrusl6Ssg26m5vY1gDX~2Q392~nxmzZP5N5ZHZD0fANG4RoadIHvrznptRwfkoQS1LqUXtB2XYwTXML9b1MAzPP~1MvtSydgPGSp; Max-Age=31536000; Domain=.soundcloud.com; Path=/; Secure; SameSite=Lax
+strict-transport-security
+max-age=63072000
+vary
+Origin
+via
+1.1 e8562587f0ff484dff67f98bff7aa74c.cloudfront.net (CloudFront)
+x-amz-cf-id
+RFDNsWz0FiylrVxKmAqCVKDw6hYyDceKjf-SgbIyyFc0XhzFYOCbUg==
+x-amz-cf-pop
+LHR61-P4
+x-cache
+Miss from cloudfront
+x-content-type-options
+nosniff
+x-datadome
+protected
+x-frame-options
+DENY
+x-robots-tag
+noindex
+accept
+application/json
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+en-GB,en;q=0.9
+connection
+keep-alive
+content-length
+486
+content-type
+application/json
+cookie
+sc_tracking_anonymous_id=%229493f7c4-52c3-4d77-96c4-b56b35c8ac8a%22; sc_theme=dark; sc_anonymous_id=256931-498601-77008-370086; datadome=Nvnef_ImQx1K5gEJlM2ZM3zreig2Urq_I6sCRvYU9KjecbllPjVq__PHPHruYkN0rU4I2YBR4rgg_aFK75wRdHE8DF59V_0o2LLmKKHvbr03Rvr4GVevyykegKMpmZb~
+host
+api-auth.soundcloud.com
+origin
+https://secure.soundcloud.com
+referer
+https://secure.soundcloud.com/
+sec-ch-ua
+"Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-site
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+x-anonymous-id
+256931-498601-77008-370086
+x-csrf-token
+e7c332657c1c3f8f979df727c11f57a17063d99c3cd06174a8a05642dce16f6e
+x-tracking-anonymous-id
+9493f7c4-52c3-4d77-96c4-b56b35c8ac8a
+
+Here is the request payload:
+{"credentials":{"kind":"password","body":{"identifier":"tetetette@gmail.com","password":"khfahwfahwfghnak.wg"}},"user_info":{"birthday":"2006-05-07","username":"Tetetette","gender":"male","consent_emails":false,"consent_recommendations":true},"vk":{"id":"tetetette@gmail.com","kd":"password","dd":"256931-498601-77008-370086","ag":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","cd":"tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc"}}
+
+This is the preview it gives on success:
+{required: "email_verification",…}
+intermediate_token
+: 
+"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIn0.kWmDbZqS_XDxBcZdc3tCxZ8Xa8krTYqIB2-8CBWM88EaW4_ZE8B6dQ.jU6i2gHus6O72x03Y0q2VA.LxZF-vv0d50XlGyp6awSRSRk2KiPvHnRWo1o429-yzaIQZuK4mQgFNka8lZu8JKcsZUIs6E18mtEEa70Xo6-iLZfgA0n-6LeJLHYJoZMufg2waxaG7s5wwtmadWFqEVCkSfzS2ENtCkqeXt9gkOYlT9G-yi6eXZ-b5NSSgnkxtQ.5os8A3-61PhFbFYYyJutTg"
+required
+: 
+"email_verification"
+
+This is response on success:
+{
+    "required": "email_verification",
+    "intermediate_token": "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIn0.kWmDbZqS_XDxBcZdc3tCxZ8Xa8krTYqIB2-8CBWM88EaW4_ZE8B6dQ.jU6i2gHus6O72x03Y0q2VA.LxZF-vv0d50XlGyp6awSRSRk2KiPvHnRWo1o429-yzaIQZuK4mQgFNka8lZu8JKcsZUIs6E18mtEEa70Xo6-iLZfgA0n-6LeJLHYJoZMufg2waxaG7s5wwtmadWFqEVCkSfzS2ENtCkqeXt9gkOYlT9G-yi6eXZ-b5NSSgnkxtQ.5os8A3-61PhFbFYYyJutTg"
+}
+
+
+It requires these cookies:
+datadome (looks like this for value: Nvnef_ImQx1K5gEJlM2ZM3zreig2Urq_I6sCRvYU9KjecbllPjVq__PHPHruYkN0rU4I2YBR4rgg_aFK75wRdHE8DF59V_0o2LLmKKHvbr03Rvr4GVevyykegKMpmZb)
+sc_anonymous_id (value looks like this: 256931-498601-77008-370086)
+sc_theme (with value set to dark)
+sc_tracking_anonymous_id (value looks like this: %229493f7c4-52c3-4d77-96c4-b56b35c8ac8a%22)
+
+
+
+Verify email looks like this
+Request URL
+https://api-auth.soundcloud.com/email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+Request Method
+POST
+Status Code
+200 OK
+Remote Address
+108.138.233.91:443
+Referrer Policy
+strict-origin
+access-control-allow-credentials
+true
+access-control-allow-headers
+Authorization, Content-Type, Device-Locale, Device-Session-Token, X-Anonymous-Id, X-CSRF-Token, X-Datadome-ClientId, X-Tracking-Anonymous-Id
+access-control-allow-methods
+DELETE, GET, PATCH, POST, PUT
+access-control-allow-origin
+https://secure.soundcloud.com
+access-control-expose-headers
+Date, X-DD-B, X-Set-Cookie
+access-control-max-age
+1728000
+connection
+keep-alive
+content-encoding
+gzip
+content-length
+50
+content-type
+application/json; charset=utf-8
+date
+Thu, 02 Apr 2026 11:39:39 GMT
+referrer-policy
+no-referrer
+server
+am/2
+strict-transport-security
+max-age=63072000
+vary
+Origin
+via
+1.1 e8562587f0ff484dff67f98bff7aa74c.cloudfront.net (CloudFront)
+x-amz-cf-id
+hBiAeyk5MYZjTWA0Z_QxLJh_Beli4PiKV5w-tCqu339_VjQzQ4_Lpg==
+x-amz-cf-pop
+LHR61-P4
+x-cache
+Miss from cloudfront
+x-content-type-options
+nosniff
+x-frame-options
+DENY
+x-robots-tag
+noindex
+accept
+application/json
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+en-GB,en;q=0.9
+connection
+keep-alive
+content-length
+349
+content-type
+application/json
+cookie
+sc_tracking_anonymous_id=%229493f7c4-52c3-4d77-96c4-b56b35c8ac8a%22; sc_theme=dark; sc_anonymous_id=256931-498601-77008-370086; datadome=Nvnef_ImQx1K5gEJlM2ZM3zreig2Urq_I6sCRvYU9KjecbllPjVq__PHPHruYkN0rU4I2YBR4rgg_aFK75wRdHE8DF59V_0o2LLmKKHvbr03Rvr4GVevyykegKMpmZb~
+host
+api-auth.soundcloud.com
+origin
+https://secure.soundcloud.com
+referer
+https://secure.soundcloud.com/
+sec-ch-ua
+"Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-site
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+x-anonymous-id
+256931-498601-77008-370086
+x-csrf-token
+e7c332657c1c3f8f979df727c11f57a17063d99c3cd06174a8a05642dce16f6e
+
+payload:
+{"intermediate_token":"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIn0.kWmDbZqS_XDxBcZdc3tCxZ8Xa8krTYqIB2-8CBWM88EaW4_ZE8B6dQ.jU6i2gHus6O72x03Y0q2VA.LxZF-vv0d50XlGyp6awSRSRk2KiPvHnRWo1o429-yzaIQZuK4mQgFNka8lZu8JKcsZUIs6E18mtEEa70Xo6-iLZfgA0n-6LeJLHYJoZMufg2waxaG7s5wwtmadWFqEVCkSfzS2ENtCkqeXt9gkOYlT9G-yi6eXZ-b5NSSgnkxtQ.5os8A3-61PhFbFYYyJutTg"}
+
+Preview:
+0TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+email-verified?client_id=tkIWLs4MIowq7bCXP80TOwx6DnDa7UPc
+96 requests
+377 kB transferred
+532 kB resources
+{email_verified: false}
+email_verified
+: 
+false
+
+Response:
+{"email_verified":false}
+
+Cookies required:
+datadome
+sc_anonymous_id
+sc_theme
+sc_tracking_anonymous_id
+
+
+
+Here is a CAPTCHA interstitial:
+
+Request URL
+https://geo.captcha-delivery.com/interstitial/
+Request Method
+POST
+Status Code
+200 OK
+Remote Address
+13.43.19.90:443
+Referrer Policy
+strict-origin-when-cross-origin
+connection
+keep-alive
+content-length
+279
+content-type
+application/json;charset=utf-8
+date
+Thu, 02 Apr 2026 11:36:37 GMT
+accept
+*/*
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+en-GB,en;q=0.9
+connection
+keep-alive
+content-length
+9165
+content-type
+application/x-www-form-urlencoded; charset=UTF-8
+host
+geo.captcha-delivery.com
+origin
+https://geo.captcha-delivery.com
+referer
+https://geo.captcha-delivery.com/interstitial/?initialCid=AHrlqAAAAAMAoPLJ0Yvqcf0AWt5Pig==&cid=R0xxFkUK9X6hVSWVyylvBVgdYdtt9prkOmKuaG7UqR29t96XqMfErpPvXeXb941UEU04X4JsKfqbYBg25W78l0K5uKngI2rrq4KVEkl5z26q2rvGixwzD2dvxtKaqfP7&referer=https%3A%2F%2Fapi-auth.soundcloud.com%2Fsign-up%3Fclient_id%3DtkIWLs4MIowq7bCXP80TOwx6DnDa7UPc&hash=7FC6D561817844F25B65CDD97F28A1&t=it&s=42707&e=4c73ab2de44a7221bd5ae9c833f78a9f75ab92f61c1ee9417d0ed993362720ceb8bb15cdbe50ab029e226ea4e6e97a54&b=1210764&dm=jd
+sec-ch-ua
+"Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-origin
+sec-fetch-storage-access
+none
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+
+Payload:
+cid=R0xxFkUK9X6hVSWVyylvBVgdYdtt9prkOmKuaG7UqR29t96XqMfErpPvXeXb941UEU04X4JsKfqbYBg25W78l0K5uKngI2rrq4KVEkl5z26q2rvGixwzD2dvxtKaqfP7&hash=7FC6D561817844F25B65CDD97F28A1&referer=https%3A%2F%2Fsecure.soundcloud.com%2F&url=https%3A%2F%2Fapi-auth.soundcloud.com%2Fsign-up%3Fclient_id%3DtkIWLs4MIowq7bCXP80TOwx6DnDa7UPc&s=42707&e=4c73ab2de44a7221bd5ae9c833f78a9f75ab92f61c1ee9417d0ed993362720ceb8bb15cdbe50ab029e226ea4e6e97a54&env=88cb4026de1695ada320f94fd90712b4df2958c7e1b513ae66b8f9804ca1af03b175cd6e67b21c6306ce6a87ac6f8861&userEnv=535a28c762050bb54d8c29ef1c98af085c7fbdb667abc559e3026bc3cb3f856990c465eb4071be33bfb0f06f98d5f91a&seed=9dcaea0a-9581-3dcc-4bde-891ca30b87a4&b=1210764&dm=jd&ddMessageFormat=&payload=yEa7QkJReE3EQTCdQFNe95BKXlvKgPoLy5cVZNFVIGJBRXsBfLSd00SljBDOTtNcu-wNkafPmkun8xESXORHVAvhKDJ_C_txqQidyLNR2Lwn5nAPSbT5YhayuWgCFgEbWHaI9YsaKRTnUGsB6waeluqWjyurJWHAQLPlWut9fRaxrrNuFcZ8ECpZ0aHuorDzpr16LZIFmFyhsxqd-fNYi5rUBIYACkBbGAKGfo5l1GLQzgLNeizalj_Uqr2ZVBwmwPVvJJKEvARAGJ37UKi2UQ6dzcq1D2hj6-M28KAHsYsSb01n3761x8mccfL7xWgHtCgOswSMt2K0r-0sfqgGCFaY2ApKMDVLdIp_iGR6ueTdejhzCnDzoSoMwbk6nThq6Il3oU6rNAomvHNRVw4wvP5FtAhtvD8Et83HFagUGKtx8g30wMYFdj3vrODGQRKCvfBDfo59eiBHiOQBsw4uFr1WpSy5589GxvAXp2AmS34lSgjCNmsyIiIV49quAFwEQcN7ldFBfC_VC9fe4KYsR2z7aN7ENozSxwwC4UNzGurJ7FheJ8YNVTqBBxR0yrdeZh83rx-WFwO8mX16mdayWL-DDtgFeaVnyDkrtUqMDxOTbVQmvUB9CWmwsydSnyMRFxfUyGflolAaDcySh3ctEHVuwhrHCaHunE1txe2RY2OqJXpvwmGO2iMOJcAjrZRA4-Gw_cT-jfDlPazrg2xS6CWK72m9eIqpMud98pUPPQ2lqwua96LQPoEJlwvR_x0EFuIgJbmyDjeQCcHYuKtyqw84lW0cQZcH7xhuYF9Mwcbao34ZuvPoviDDVQmzZ7Vvo0dJCUc0EBNXQ5tBDLqPXsJduGutM_VgP5GVf8nMhc7RoXjsjpwDfvG29T83Rob0OYi-e7zz1-3n23TNgVn2hg0HOuXXMQoAWMedMYntcN4AkFKWlhybA8GvRtcRMT9D-uc8INNQqxBvjuLXXk5t8NWKr3AA9oLflNfxlWX5oLVSm9DL3bbCFXcf0q50-U4kh8yUyxdrArSy-FgZLZSE028Ink3-hSYF_aUlGjSJLnHbkr-ipYGtR62LacxqLjPbZSSNkxSUEJYwYpRi46oE02OcpfnAvqIDRs0CS6dQQLZHHq8ZMCBWN441BMh3-kGjbDRa5RYsm-FibLrddrjmQ_-tiBFSc30UwcZ9AAkkC5So7UGYSFxZL-mcCKOdBDw-TX8gwSWNeN2TE8R2uviIJpXdhXmeLXen5aMIMMeAG6rmPB6ecIula6FS38cdeFbyVgLvYKKmfqk1vbs9gQXwV033w83bgatJrUTrGG72mHwewTzreDxmWHp6eIu8oBmxSlfQKSzeWcx46CsxOXUkNBoVxUhnGomkHwbmPldD2F5r5VC_aH12hjoJmvAP11Ff9b7u5J3X-cwvucfqO-ohbCusBbwgufAxKXgjOnji1ooHlO-QjVgMImDI4qG4lhhX8o7oh4QUkxB0DS6lYZqlAEJ5tNND7Cg2keobCAOtqsAqcUrWQO0K5ofGF1F2uT-viKP2HV6LX8EnrKmuh2cHVJ6caiIvrHhPyxQ0U6aMjzo6LNMCSSnanOfBGtTgVaEC7qjkCZL8ynwJ8Rx516XYyrRL9l7Q7nZ63M0V3nRI9VwqN__6zVchFclcaNedmcGn7Ku0yAuXLSghhNTBJb0Dd2KPW_U5d5SQHJTVMTndQuq9ALbzy_b4g_qU-Jkc9Ftw-_LvoNxxVUqPCxipkyzUvfYTmUvByBR-665amJBgjdMet3T7SzxLEmudbnK3BfzrFdYzeC43DLnYJD9wLXqccExFDop853kKlGspqjCxJhCCDtfjPIaXFXjmhylJHKHQUqNN2ZxuB3uba0MwI9adZPeZcGjssV0hF3nI8bVudgPs6Y4EJ2OoRRlTG8XA1Ge2l99RUEBi4tiuycaQ20P2h_q0anCEn4ghqeCJ7yoylCA79qlwJklaYFhvQjjjnwFAmZgbgdFBTaxulm3rJcehykaGovTWKsOtkdv2UBZFZ2_Gg3E9sdRCtYQ0pm7_QGXc2MIr5zD74hxs6TI4qWkWIq7YpnYg51Nmnl11EMxaUH0_9fad5r2WserMDnpACQOdwvK0kx_fhO80hvRnETwZm1lPnOhsTiMrXiG3CtVQeTBrufsnPXa-mvHZNPkpDSu6slZmNidaKeUuQ2VVIjUzKNZnXdnxTIKO0BrKchbEhneSvGbE8xIHznx-jmrbQ7lLc33rnGRMtxTVq10G7LXgEXbd3RTlj2aqaHatgX3cAdBitjhS5Show more
+
+

@@ -1,0 +1,13 @@
+GET https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1714416759&auto_play=true
+GET https://dwt.soundcloud.com/tags.js
+GET https://widget.sndcdn.com/widget-8-bd97d237b695.js
+GET https://widget.sndcdn.com/widget-9-14f17d949373.js
+GET blob:https://w.soundcloud.com/9c2291ed-41df-4f69-924e-234e30f4b675
+POST https://dwt.soundcloud.com/js/
+GET https://widget.sndcdn.com/assets/images/logo-200x120-3190df52.png
+GET https://widget.sndcdn.com/widget-0-5e52282d0517.js
+GET https://widget.sndcdn.com/widget-1-2a294ec9db9c.js
+GET https://widget.sndcdn.com/widget-5-cd8b86ff1046.js
+GET https://api-widget.soundcloud.com/resolve?url=https%3A//api.soundcloud.com/tracks/1714416759&format=json&client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu&app_version=1773929926
+GET https://widget.sndcdn.com/widget-3-9c117d9e334a.js
+POST https://api-widget.soundcloud.com/me?client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu
